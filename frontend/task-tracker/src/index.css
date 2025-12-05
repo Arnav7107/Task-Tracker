@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+/* Smooth, classy font + dark base */
+body {
+  @apply bg-black text-gray-200 font-sans;
+}
