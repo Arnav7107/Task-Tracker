@@ -83,20 +83,6 @@ async function transcribeAudio(filePath, mimeType = "audio/webm") {
 async function parseTranscript(transcript) {
   const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_API_KEY });
 
-//   const prompt = `
-// Extract structured task details from this speech.
-
-// TRANSCRIPT:
-// "${transcript}"
-
-// Return ONLY:
-// {
-//   "title": string,
-//   "priority": "High" | "Medium" | "Low" | "",
-//   "dueDate": string,
-//   "status": "To Do"
-// }
-// `;
 
 const prompt = `
 You are a task extraction system for a voice-enabled task manager.
